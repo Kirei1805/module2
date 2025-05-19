@@ -93,11 +93,10 @@ public class PrintShapes {
 
     private static void printBottomRightTriangle(int height) {
         for (int i = 1; i <= height; i++) {
-            // In dấu cách
             for (int j = 1; j <= height - i; j++) {
                 System.out.print("  ");
             }
-            // In dấu *
+
             for (int k = 1; k <= i; k++) {
                 System.out.print("* ");
             }
@@ -116,11 +115,9 @@ public class PrintShapes {
 
     private static void printTopRightTriangle(int height) {
         for (int i = height; i >= 1; i--) {
-            // In dấu cách
             for (int j = 1; j <= height - i; j++) {
                 System.out.print("  ");
             }
-            // In dấu *
             for (int k = 1; k <= i; k++) {
                 System.out.print("* ");
             }
@@ -133,11 +130,9 @@ public class PrintShapes {
         int height = sc.nextInt();
 
         for (int i = 1; i <= height; i++) {
-            // In dấu cách để căn giữa
             for (int j = 1; j <= height - i; j++) {
                 System.out.print(" ");
             }
-            // In dấu *
             for (int k = 1; k <= (2 * i - 1); k++) {
                 System.out.print("*");
             }
