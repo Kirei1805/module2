@@ -8,49 +8,49 @@ public class ProductManager {
     Scanner scanner = new Scanner(System.in);
 
     public void showMenu() {
-        System.out.println("\n----- Quản lý sản phẩm ----- ");
-        System.out.println("1. Thêm sản phẩm");
-        System.out.println("2. Hiển thị danh sách sản phẩm");
-        System.out.println("3. Cập nhật sản phẩm");
-        System.out.println("4. Xóa sản phẩm");
-        System.out.println("5. Thoát");
-        System.out.print("Chọn chức năng: ");
+        System.out.println("\n----- Manage Products ----- ");
+        System.out.println("1. Add product");
+        System.out.println("2. Display product");
+        System.out.println("3. Update product");
+        System.out.println("4. Delete product");
+        System.out.println("5. Exit");
+        System.out.print(" Enter your Choice : ");
     }
 
     public void addProduct() {
-        System.out.print("Nhập ID sản phẩm: ");
+        System.out.print("Enter product ID : ");
         int id = Integer.parseInt(scanner.nextLine());
 
         for (Product p : products) {
             if (p.getId() == id) {
-                System.out.println("ID đã tồn tại.Mời nhập lại.");
+                System.out.println("ID Exist in your product list.");
                 return;
             }
         }
 
-        System.out.print("Nhập tên sản phẩm: ");
+        System.out.print("Enter product name : ");
         String name = scanner.nextLine();
 
-        System.out.print("Nhập giá sản phẩm: ");
+        System.out.print("Enter product price : ");
         double price = Double.parseDouble(scanner.nextLine());
 
         products.add(new Product(id, name, price));
-        System.out.println("Thêm sản phẩm thành công!");
+        System.out.println("Successfully added product.!");
     }
 
     public void displayProducts() {
         if (products.isEmpty()) {
-            System.out.println("Danh sách sản phẩm trống.");
+            System.out.println("List is empty.");
             return;
         }
-        System.out.println("\nDanh sách sản phẩm:");
+        System.out.println("\nList of products :");
         for (Product p : products) {
             System.out.println(p);
         }
     }
 
     public void updateProduct() {
-        System.out.print("Nhập ID sản phẩm cần cập nhật: ");
+        System.out.print("Enter product ID need to be updated : ");
         int id = Integer.parseInt(scanner.nextLine());
 
         Product productToUpdate = null;
@@ -62,32 +62,32 @@ public class ProductManager {
         }
 
         if (productToUpdate == null) {
-            System.out.println("Không tìm thấy sản phẩm với ID trên.");
+            System.out.println("Don't exist in your product list.");
             return;
         }
 
-        System.out.print("Nhập tên mới (để trống nếu không thay đổi): ");
+        System.out.print("Enter new product name : ");
         String newName = scanner.nextLine();
         if (!newName.trim().isEmpty()) {
             productToUpdate.setName(newName);
         }
 
-        System.out.print("Nhập giá mới (để trống nếu không thay đổi): ");
+        System.out.print("Enter new product price : ");
         String priceInput = scanner.nextLine();
         if (!priceInput.trim().isEmpty()) {
             try {
                 double newPrice = Double.parseDouble(priceInput);
                 productToUpdate.setPrice(newPrice);
             } catch (NumberFormatException e) {
-                System.out.println("Giá nhập không hợp lệ, không cập nhật giá.");
+                System.out.println("Price is not suitable.");
             }
         }
 
-        System.out.println("Cập nhật sản phẩm thành công!");
+        System.out.println("Updated success product : !");
     }
 
     public void deleteProduct() {
-        System.out.print("Nhập ID sản phẩm cần xóa: ");
+        System.out.print("Enter ID need to be deleted : ");
         int id = Integer.parseInt(scanner.nextLine());
 
         Product productToDelete = null;
@@ -99,11 +99,12 @@ public class ProductManager {
         }
 
         if (productToDelete == null) {
-            System.out.println("Không tìm thấy sản phẩm với ID trên.");
+            System.out.println("Can't find product with ID .");
             return;
         }
 
-        products.remove(productToDelete);
-        System.out.println("Xóa sản phẩm thành công!");
+            products.remove(productToDelete);
+        System.out.println("Deleted success product : !");
     }
 }
+
