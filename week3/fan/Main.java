@@ -1,4 +1,4 @@
-package week3.Fan;
+package week3.fan;
 
 public class Main {
     public static void main(String[] args) {

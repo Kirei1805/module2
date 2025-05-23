@@ -1,4 +1,4 @@
-package week3.Fan;
+package week3.fan;
 
 public class Fan {
     public static final int SLOW = 1;

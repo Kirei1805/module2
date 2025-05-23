@@ -1,4 +1,4 @@
-package week3.QuadraticEquation;
+package week3.quadraticEquation;
 
 import java.util.Scanner;
 

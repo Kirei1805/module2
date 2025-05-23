@@ -1,4 +1,4 @@
-package week3.StopWatch;
+package week3.stopWatch;
 
 import java.util.Random;
 

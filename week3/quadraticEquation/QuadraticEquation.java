@@ -1,4 +1,4 @@
-package week3.QuadraticEquation;
+package week3.quadraticEquation;
 
 public class QuadraticEquation {
     private double a,b,c;
