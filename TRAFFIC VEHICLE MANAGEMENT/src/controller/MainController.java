@@ -7,15 +7,15 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainController {
-    private CarController carController;
-    private TruckController truckController;
-    private MotorcycleController motorcycleController;
+    private controller.CarController carController;
+    private controller.TruckController truckController;
+    private controller.MotorcycleController motorcycleController;
     private ArrayList<String> hangSanXuat;
 
     public MainController() {
-        this.carController = new CarController();
-        this.truckController = new TruckController();
-        this.motorcycleController = new MotorcycleController();
+        this.carController = new controller.CarController();
+        this.truckController = new controller.TruckController();
+        this.motorcycleController = new controller.MotorcycleController();
         this.hangSanXuat = new ArrayList<>();
         initializeManufacturerData();
         initializeSampleData();
