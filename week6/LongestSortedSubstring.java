@@ -7,7 +7,6 @@ public class LongestSortedSubstring {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a string: ");
         String input = scanner.nextLine();
-
         String maxSub = "";
         String current = "";
 
@@ -22,7 +21,6 @@ public class LongestSortedSubstring {
             }
         }
 
-        // Check once more after loop
         if (current.length() > maxSub.length()) {
             maxSub = current;
         }
